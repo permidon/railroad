@@ -4,6 +4,13 @@
   <strong>Number:</strong>
   <%= @train.number %>
 </p>
-
+<p>
+  <strong>Assigned route:</strong>
+  <% if @train.route %>
+    <%= @train.route.title %>
+  <% else %>
+    The route is not assigned
+  <% end %>
+</p>
 <%= link_to 'Edit', edit_train_path(@train) %> |
 <%= link_to 'Back', trains_path %>

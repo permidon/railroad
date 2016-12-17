@@ -4,6 +4,31 @@
   <strong>Title:</strong>
   <%= @route.title %>
 </p>
+<p>
+  <strong>Stations list:</strong>
+  <% if @route.railway_stations.empty? %>
+    There are no stations
+  <% else %>
+    <ul>
+    <% @route.railway_stations.each do |station| %>
+      <li>"<%= station.title %>"</li>
+    <% end %>
+    </ul>
+  <% end %>
+</p>
+
+<p>
+  <strong>Assigned to trains:</strong>
+  <% if @route.trains.empty? %>
+    There are no trains
+  <% else %>
+    <ul>
+    <% @route.trains.each do |train| %>
+      <li>№<%= train.number %></li>
+    <% end %>
+    </ul>
+  <% end %>
+</p>
 
 <%= link_to 'Edit', edit_route_path(@route) %> |
 <%= link_to 'Back', routes_path %>
