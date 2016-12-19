@@ -9,8 +9,45 @@
   <% if @train.route %>
     <%= @train.route.title %>
   <% else %>
-    The route is not assigned
+    Route is not assigned
   <% end %>
 </p>
+<p>
+  <strong>Cars quantity:</strong>
+  <% if @train.cars.empty? %>
+      There are no attached cars.
+  <% else %>
+      <% i = 0 %>
+      <% j = 0 %>
+      <% couchette_upper = 0 %>
+      <% couchette_lower = 0 %>
+      <% corridor_upper = 0 %>
+      <% corridor_lower = 0 %>
+      <% @train.cars.each do |car| %>
+        <% if car.car_type == "Corridor car" %>
+          <% i += 1 %>
+          <% corridor_upper += car.upper_seats if !car.upper_seats.nil? %>
+          <% corridor_lower += car.lower_seats if !car.lower_seats.nil? %>
+        <% else %>
+          <% j += 1 %>
+          <% couchette_upper += car.upper_seats if !car.upper_seats.nil? %>
+          <% couchette_lower += car.lower_seats if !car.lower_seats.nil? %>
+        <% end %>
+      <% end %>
+      Corridor cars: <%= i %>. Couchette cars: <%= j %>.
+<% end %>
+
+<p>
+  <strong>Seats quantity:</strong>
+  <% if @train.cars.empty? %>
+      There are no seats.
+  <% else %>
+      <br>
+      Corridor upper seats - <%= corridor_upper %>, corridor lower seats - <%= corridor_lower %>.
+      <br>
+      Couchette upper seats - <%= couchette_upper %>, couchette lower seats - <%= couchette_lower %>.
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_train_path(@train) %> |
 <%= link_to 'Back', trains_path %>
