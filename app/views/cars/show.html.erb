@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @car.number %>
+</p>
+<p>
+<strong>Type:</strong>
+<%= @car.car_type %>
+</p>
+<p>
+  <strong>Seats quantity:</strong>
+  <% if @car.upper_seats.nil? %>
+      There is no upper seats.
+  <% else %>
+    Upper seats: <%= @car.upper_seats %>.
+  <% end %>
+  <% if @car.lower_seats.nil? %>
+      There is no lower seats.
+  <% else %>
+      Lower seats: <%= @car.lower_seats %>.
+  <% end %>
+</p>
+<p>
+  <strong>Connected to train:</strong>
+  <% if @car.train_id.nil? %>
+    There is no train
+  <% else %>
+    <%= @car.train.number %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>

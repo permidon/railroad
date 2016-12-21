@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 
+  type: 
+  upper_seats: 
+  lower_seats: 
+  belongs_to: 
+
+two:
+  number: 
+  type: 
+  upper_seats: 
+  lower_seats: 
+  belongs_to: 

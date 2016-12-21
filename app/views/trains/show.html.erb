@@ -9,8 +9,22 @@
   <% if @train.route %>
     <%= @train.route.title %>
   <% else %>
-    The route is not assigned
+    Route is not assigned
   <% end %>
 </p>
+<p>
+  <strong>Cars quantity:</strong>
+    Corridor cars: <%= @train.cars.corridor.count %>.
+    Couchette cars: <%= @train.cars.couchette.count %>.
+<p>
+  <strong>Seats quantity:</strong>
+    <br>
+    Corridor upper seats - <%= @train.cars.corridor.sum(:upper_seats) %>,
+    corridor lower seats - <%= @train.cars.corridor.sum(:lower_seats) %>.
+    <br>
+    Couchette upper seats - <%= @train.cars.couchup %>,
+    couchette lower seats - <%= @train.cars.couchlow %>.
+</p>
+
 <%= link_to 'Edit', edit_train_path(@train) %> |
 <%= link_to 'Back', trains_path %>
