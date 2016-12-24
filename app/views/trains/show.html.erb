@@ -22,8 +22,8 @@
     Corridor upper seats - <%= @train.cars.corridor.sum(:upper_seats) %>,
     corridor lower seats - <%= @train.cars.corridor.sum(:lower_seats) %>.
     <br>
-    Couchette upper seats - <%= @train.cars.couchup %>,
-    couchette lower seats - <%= @train.cars.couchlow %>.
+    Couchette upper seats - <%= @train.cars.couchette.sum(:upper_seats) %>,
+    couchette lower seats - <%= @train.cars.couchette.sum(:lower_seats) %>.
 </p>
 
 <%= link_to 'Edit', edit_train_path(@train) %> |

@@ -10,8 +10,8 @@
     There are no stations
   <% else %>
     <ul>
-    <% @route.railway_stations.each do |station| %>
-      <li>"<%= station.title %>"</li>
+    <% @route.railway_stations.sorting.each do |station| %>
+      <li><%= RailwayStationsRoute.posit(@route, station) %> - "<%= station.title %>"</li>
     <% end %>
     </ul>
   <% end %>
