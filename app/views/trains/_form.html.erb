@@ -11,6 +11,11 @@
     <%= f.collection_select :route_id, Route.all, :id, :title, :include_blank => true %>
   </div>
 
+    <div class="field">
+      <%= f.label :cars_order %>
+      <%= f.select :cars_order, {"Head" => true, "Tail" => false} %>
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

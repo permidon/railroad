@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :sleeping_car, controller: 'cars'
+  resources :coupe_car, controller: 'cars'
+  resources :economy_car, controller: 'cars'
+  resources :sedentary_car, controller: 'cars'
   resources :cars
   resources :trains
   resources :railway_stations

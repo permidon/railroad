@@ -1,27 +1,16 @@
 class Car < ApplicationRecord
   belongs_to :train
 
-  # Для купе почитал и применил иную запись scope
-  def self.corridor
-    where(:car_type => 'Corridor car')
+  scope :head, -> { order('number ASC')}
+  scope :tail, -> { order('number DESC')}
+
+  before_validation :add_car_number
+  validates :number, uniqueness: { scope: :train_id }
+
+  protected
+
+  def add_car_number
+    self.number = (Car.where(train_id: self.train_id).maximum('number') || 0).to_i + 1
   end
 
-  # Но, т.к. мы их не проходили, решил для треннировки сделать свое решение для плацкарта:
-  def self.couchette
-    self.all.map { |x| x if x.car_type == 'Couchette car' }.compact
-  end
-
-  def self.couchup
-    up = 0
-    couchette.each { |x| up += x.upper_seats if !x.upper_seats.nil? }
-    up
-  end
-
-  def self.couchlow
-    low = 0
-    couchette.each { |x| low += x.lower_seats if !x.lower_seats.nil? }
-    low
-  end
-
-  validates :number, presence: true
 end
