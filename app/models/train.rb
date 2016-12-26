@@ -8,8 +8,8 @@ class Train < ApplicationRecord
     cars_order ? cars.head : cars.tail
   end
 
-  def seats_count(car_type, place_type)
-    self.cars.where('type = ?', car_type).sum("#{place_type}".to_sym)
+  def places_count(car_type, place_type)
+    self.cars.where(type: car_type).sum(place_type)
   end
 
   validates :number, presence: true

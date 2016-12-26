@@ -11,7 +11,7 @@
   <% else %>
     <ul>
     <% @route.railway_stations.sorting.each do |station| %>
-      <li><%= RailwayStationsRoute.posit(@route, station) %> - "<%= station.title %>"</li>
+      <li><%= RailwayStationsRoute.position(@route, station) %> - "<%= station.title %>"</li>
     <% end %>
     </ul>
   <% end %>
