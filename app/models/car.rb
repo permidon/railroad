@@ -1,9 +1,6 @@
 class Car < ApplicationRecord
   belongs_to :train
 
-  scope :corridor, -> { where('car_type = ?', 'Corridor car') }
-  scope :couchette, -> { where('car_type = ?', 'Couchette car') }
-
   scope :head, -> { order('number ASC')}
   scope :tail, -> { order('number DESC')}
 

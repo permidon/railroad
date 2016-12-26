@@ -5,20 +5,25 @@
   <%= @car.number %>
 </p>
 <p>
-<strong>Type:</strong>
-<%= @car.car_type %>
+  <strong>Type:</strong>
+  <%= @car.type %>
 </p>
 <p>
   <strong>Seats quantity:</strong>
-  <% if @car.upper_seats.nil? %>
-      There is no upper seats.
-  <% else %>
-    Upper seats: <%= @car.upper_seats %>.
+  <% if @car.upper_places.present? %>
+    Upper places: <%= @car.upper_places %>.
   <% end %>
-  <% if @car.lower_seats.nil? %>
-      There is no lower seats.
-  <% else %>
-      Lower seats: <%= @car.lower_seats %>.
+  <% if @car.lower_places.present? %>
+    Lower places: <%= @car.lower_places %>.
+  <% end %>
+  <% if @car.side_upper_places.present? %>
+      Side upper places: <%= @car.side_upper_places %>.
+  <% end %>
+  <% if @car.side_lower_places.present? %>
+      Side lower places: <%= @car.side_lower_places %>.
+  <% end %>
+  <% if @car.seat_places.present? %>
+      Seat places: <%= @car.seat_places %>.
   <% end %>
 </p>
 <p>

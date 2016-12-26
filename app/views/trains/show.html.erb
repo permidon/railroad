@@ -23,19 +23,6 @@
       Cars are not attached.
   <% end %>
 </p>
-<!--<p>-->
-  <!--<strong>Cars quantity:</strong>-->
-    <!--Corridor cars: <%= @train.cars.corridor.count %>.-->
-    <!--Couchette cars: <%= @train.cars.couchette.count %>.-->
-<!--<p>-->
-  <!--<strong>Seats quantity:</strong>-->
-    <!--<br>-->
-    <!--Corridor upper seats - <%= @train.cars.corridor.sum(:upper_seats) %>,-->
-    <!--corridor lower seats - <%= @train.cars.corridor.sum(:lower_seats) %>.-->
-    <!--<br>-->
-    <!--Couchette upper seats - <%= @train.cars.couchette.sum(:upper_seats) %>,-->
-    <!--couchette lower seats - <%= @train.cars.couchette.sum(:lower_seats) %>.-->
-<!--</p>-->
 
 <%= link_to 'Edit', edit_train_path(@train) %> |
 <%= link_to 'Back', trains_path %>

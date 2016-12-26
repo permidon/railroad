@@ -1,19 +1,34 @@
-<%= form_for(@car) do |f| %>
+<%= form_for(@car, as: :car) do |f| %>
   <%= render 'common/errors', resource: @car %>
 
   <div class="field">
-    <%= f.label :car_type %>
-    <%= f.select :car_type, ['Corridor car', 'Couchette car'] %>
+    <%= f.label :type %>
+    <%= f.select :type, {"Sedentary Car" => "SedentaryCar", "Economy Car" => "EconomyCar", "Coupe Car" => "CoupeCar", "Sleeping Car" => "SleepingCar"} %>
   </div>
 
   <div class="field">
-    <%= f.label :upper_seats %>
-    <%= f.text_field :upper_seats %>
+    <%= f.label :upper_places %>
+    <%= f.text_field :upper_places %>
   </div>
 
   <div class="field">
-    <%= f.label :lower_seats %>
-    <%= f.text_field :lower_seats %>
+    <%= f.label :lower_places %>
+    <%= f.text_field :lower_places %>
+  </div>
+
+  <div class="field">
+    <%= f.label :side_upper_places %>
+    <%= f.text_field :side_upper_places %>
+  </div>
+
+  <div class="field">
+    <%= f.label :side_lower_places %>
+    <%= f.text_field :side_lower_places %>
+  </div>
+
+  <div class="field">
+    <%= f.label :seat_places %>
+    <%= f.text_field :seat_places %>
   </div>
 
   <div class="field">

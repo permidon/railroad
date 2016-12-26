@@ -27,7 +27,7 @@ class CarsController < ApplicationController
 
   def update
     if @car.update(car_params)
-      redirect_to @car, notice: 'Car was successfully updated.'
+      redirect_to  car_path(@car), notice: 'Car was successfully updated.'
     else
       render :edit
     end
@@ -45,6 +45,6 @@ class CarsController < ApplicationController
   end
 
   def car_params
-    params.require(:car).permit(:number, :car_type, :upper_seats, :lower_seats, :side_upper_seats, :side_lower_seats, :seat_seats, :train_id)
+    params.require(:car).permit(:number, :type, :upper_places, :lower_places, :side_upper_places, :side_lower_places, :seat_places, :train_id)
   end
 end
