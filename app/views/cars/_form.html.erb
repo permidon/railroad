@@ -2,11 +2,6 @@
   <%= render 'common/errors', resource: @car %>
 
   <div class="field">
-    <%= f.label :number %>
-    <%= f.text_field :number %>
-  </div>
-
-  <div class="field">
     <%= f.label :car_type %>
     <%= f.select :car_type, ['Corridor car', 'Couchette car'] %>
   </div>
