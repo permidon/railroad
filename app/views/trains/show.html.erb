@@ -16,12 +16,15 @@
   <strong>Attached Cars:</strong>
   <br>
   <% if @train.cars.present? %>
-      <% @train.cars_sorting.each do |car| %>
-          <%= link_to "Car №#{car.number}", car_path(car) %><br>
-      <% end %>
+    <% @train.cars_sorting.each do |car| %>
+      <%= link_to "Car №#{car.number}", car_path(car) %><br>
+    <% end %>
   <% else %>
-      Cars are not attached.
+    Cars are not attached.
   <% end %>
+</p>
+<p>
+  <%= link_to "Add Car", new_train_car_path(@train) %>
 </p>
 
 <%= link_to 'Edit', edit_train_path(@train) %> |

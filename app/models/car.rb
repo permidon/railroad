@@ -1,11 +1,11 @@
 class Car < ApplicationRecord
   belongs_to :train
 
-  scope :head, -> { order('number ASC')}
-  scope :tail, -> { order('number DESC')}
-
   before_validation :add_car_number
   validates :number, uniqueness: { scope: :train_id }
+
+  scope :head, -> { order('number ASC')}
+  scope :tail, -> { order('number DESC')}
 
   protected
 

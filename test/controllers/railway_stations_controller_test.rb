@@ -10,12 +10,12 @@ class RailwayStationsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get new" do
+  test "should get index" do
     get new_railway_station_url
     assert_response :success
   end
 
-  test "should create railway_station" do
+  test "should new railway_station" do
     assert_difference('RailwayStation.count') do
       post railway_stations_url, params: { railway_station: { title: @railway_station.title } }
     end
