@@ -1,0 +1,36 @@
+<h1>Results</h1>
+
+<% if @result.empty? %>
+    <p>There are no trains</p>
+<% else %>
+ <table>
+   <thead>
+   <tr>
+     <td width="150">Train number</td>
+     <td width="250">Departure from "<%= @departure_station.title %>"</td>
+     <td width="250">Arrival to "<%= @arrival_station.title %>"</td>
+     <td></td>
+   </tr>
+   </thead>
+   <tbody>
+   <% @result.each do |train| %>
+       <tr>
+         <td><%= train.number %></td>
+         <td><%= @departure_station.departure_in(train.route.id) %></td>
+         <td><%= @arrival_station.arrival_in(train.route.id) %></td>
+         <td>
+           <%= form_tag new_ticket_path, method: :get do %>
+             <%= hidden_field_tag :arrival_station_id, @arrival_station.id %>
+             <%= hidden_field_tag :departure_station_id, @departure_station.id %>
+             <%= hidden_field_tag :train_id, train.id %>
+             <%= submit_tag "Buy Ticket" %>
+           <% end %>
+         </td>
+       </tr>
+   <% end %>
+   </tbody>
+ </table>
+<% end %>
+
+<%= link_to 'New Search', search_path %> |
+<%= link_to 'Home', welcome_index_path %>

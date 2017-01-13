@@ -4,6 +4,8 @@ class Train < ApplicationRecord
   has_many :tickets
   has_many :cars
 
+  validates :number, presence: true
+
   def cars_sorting
     cars_order ? cars.head : cars.tail
   end
@@ -11,6 +13,4 @@ class Train < ApplicationRecord
   def places_count(car_type, place_type)
     self.cars.where(type: car_type).sum(place_type)
   end
-
-  validates :number, presence: true
 end

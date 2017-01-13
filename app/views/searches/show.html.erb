@@ -1,0 +1,23 @@
+<h1>Train search</h1>
+<p>
+  <table>
+    <thead>
+    <tr>
+      <td>Departure station</td>
+      <td>Arrival station</td>
+      <td></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <%= form_tag search_path, method: :post do %>
+          <td><%= select_tag :departure_station_id, options_from_collection_for_select(@railway_stations, :id, :title) %></td>
+          <td><%= select_tag :arrival_station_id, options_from_collection_for_select(@railway_stations, :id, :title) %></td>
+          <td><%= submit_tag "Search" %></td>
+      <% end %>
+    </tr>
+    </tbody>
+  </table>
+</p>
+
+<%= link_to 'Home', welcome_index_path %>
