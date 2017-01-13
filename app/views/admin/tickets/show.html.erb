@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <td>TICKET №<%= @ticket.number %>, owned by user: "<%= @ticket.user.email %>"</td>
+  </tr>
+  <tr>
+    <td>Train № <%= @ticket.train.number %> ("<%= @ticket.train.route.title %>")</td>
+  </tr>
+  <tr>
+    <td>Departure: "<%= @ticket.first_station.title %>" - <%= @ticket.first_station.departure_in(@ticket.train.route) %></td>
+  </tr>
+  <tr>
+    <td>Arrival: "<%= @ticket.last_station.title %>" - <%= @ticket.last_station.departure_in(@ticket.train.route) %></td>
+  </tr>
+  <tr>
+    <td>Passenger: <%= @ticket.fullname.upcase %>, passport: <%=@ticket.passport %></td>
+  </tr>
+</table>
+
+<%= link_to 'Back', admin_tickets_path %>
