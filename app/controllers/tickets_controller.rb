@@ -1,4 +1,5 @@
 class TicketsController < ApplicationController
+  before_action :authenticate_user!, only: :create
   before_action :set_ticket, only: [:show, :destroy]
 
   def index
@@ -13,7 +14,7 @@ class TicketsController < ApplicationController
   end
 
   def create
-    @ticket = Ticket.new(ticket_params)
+    @ticket = current_user.tickets.new(ticket_params)
 
     if @ticket.save
       redirect_to @ticket, notice: 'Ticket was successfully created.'
@@ -24,7 +25,7 @@ class TicketsController < ApplicationController
 
   def destroy
     @ticket.destroy
-    redirect_to tickets_path, notice: 'Route was successfully destroyed.'
+    redirect_to tickets_path, notice: 'Ticket was successfully destroyed.'
   end
 
   private
@@ -34,7 +35,7 @@ class TicketsController < ApplicationController
   end
 
   def ticket_params
-    params.require(:ticket).permit(:user_id, :fullname, :passport, :train_id, :first_station_id, :last_station_id)
+    params.require(:ticket).permit(:fullname, :passport, :train_id, :first_station_id, :last_station_id)
   end
 
 end

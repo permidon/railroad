@@ -1,0 +1,21 @@
+<h1>Cars list</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Type</th>
+      <th>Train</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cars.each do |car| %>
+      <%= render template: 'admin/cars/_car', locals: { car: car } %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Home', welcome_index_path %>
