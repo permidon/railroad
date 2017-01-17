@@ -1,29 +1,29 @@
 <p>
-  <strong>Number:</strong>
+  <strong><%= t('common.number') %>:</strong>
   <%= @train.number %>
 </p>
 <p>
-  <strong>Assigned route:</strong>
+  <strong><%= t('menu.assign_route') %>:</strong>
   <% if @train.route %>
     <%= @train.route.title %>
   <% else %>
-    Route is not assigned
+      <%= t('messages.route_absent') %>
   <% end %>
 </p>
 <p>
-  <strong>Attached Cars:</strong>
+  <strong><%= t('menu.attached_cars') %>:</strong>
   <br>
   <% if @train.cars.present? %>
     <% @train.cars_sorting.each do |car| %>
-      <%= link_to "Car №#{car.number}", admin_car_path(car) %><br>
+      <%= link_to t('menu.number_of_car', action: "#{car.number}"), admin_car_path(car) %><br>
     <% end %>
   <% else %>
-    Cars are not attached.
+      <%= t('menu.cars') %> <%= t('messages.absent') %>
   <% end %>
 </p>
 <p>
-  <%= link_to "Add Car", new_admin_train_car_path(@train) %>
+  <%= link_to t('menu.add_car'), new_admin_train_car_path(@train) %>
 </p>
 
-<%= link_to 'Edit', edit_admin_train_path(@train) %> |
-<%= link_to 'Back', admin_trains_path %>
+<%= link_to t('common.edit'), edit_admin_train_path(@train) %> |
+<%= link_to t('common.back'), admin_trains_path %>

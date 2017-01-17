@@ -20,7 +20,7 @@ class Admin::CarsController < Admin::BaseController
     @car = @train.cars.new(car_params)
 
     if @car.save
-      redirect_to [:admin, @train], notice: 'Car was successfully created.'
+      redirect_to [:admin, @train], notice: t('.success')
     else
       render :new
     end
@@ -28,7 +28,7 @@ class Admin::CarsController < Admin::BaseController
 
   def update
     if @car.update(car_params)
-      redirect_to admin_car_path(@car), notice: 'Car was successfully updated.'
+      redirect_to admin_car_path(@car), notice: t('.success')
     else
       render :edit
     end
@@ -36,7 +36,7 @@ class Admin::CarsController < Admin::BaseController
 
   def destroy
     @car.destroy
-    redirect_to admin_cars_path, notice: 'Car was successfully destroyed.'
+    redirect_to admin_cars_path, notice: t('.success')
   end
 
   private

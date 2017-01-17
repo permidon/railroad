@@ -1,0 +1,150 @@
+ru:
+  common:
+    greeting: 'Привет'
+    errors: 'При заполнении формы возникли ошибки'
+    title: 'Управление железной дорогой'
+    invitation: 'Войдите, чтобы начать'
+    footer: '© 2016-2017 Роман Перминов. Учебный проект в '
+    school: 'онлайн-школе Thinknetica'
+    sign_in: 'Войти'
+    sign_out: 'Выйти'
+    home: 'Домой'
+    back: 'Назад'
+    show: 'Показать'
+    edit: 'Редактировать'
+    destroy: 'Удалить'
+    confirmation: 'Вы уверены?'
+    number: 'Номер'
+    arrival_station: 'Станция прибытия'
+    departure_station: 'Станция отправления'
+    arrival_time: 'Прибытие на станцию:'
+    departure_time: 'Отправление от станции:'
+    buy: 'Купить билет'
+    no_access: 'У вас нет доступа к этой странице'
+  menu:
+    admin_part: 'Админка'
+    title: 'Название'
+    position: 'Позиция'
+    stations: 'Станции'
+    station: 'станция'
+    route_station_time: 'Время прибытия / Время отправления'
+    route_trains: 'Поезда, следующие по маршруту'
+    trains: 'Поезда'
+    train: 'поезд'
+    type: 'Тип'
+    routes: 'Маршруты'
+    route: 'маршрут'
+    tickets: 'Билеты'
+    ticket: 'билет'
+    cars: 'Вагоны'
+    car: 'вагон'
+    seats_quantity: 'Количество сидений'
+    search: 'Поиск'
+    results: 'Результаты поиска'
+    train_number: 'Номер поезда'
+    car_number: 'Номер вагона'
+    number_of_car: 'Вагон № %{action}'
+    ticket_number: 'Номер билета'
+    new: 'Новый'
+    edit: 'Редактировать'
+    new_station: 'Новая станция'
+    edit_station: 'Редактировать станцию'
+    new_route: 'Новый маршрут'
+    new_train: 'Новый поезд'
+    passenger: 'Данные пассажира'
+    fullname: 'ФИО'
+    passport: 'Номер паспорта'
+    owner: 'владелец:'
+    upper: 'Верхних'
+    lower: 'Нижних'
+    side_upper: 'Боковых верхних'
+    side_lower: 'Боковых нижних'
+    seats: 'Сидячих'
+    places: 'сидений'
+    connected_train: 'Пристыкован к поезду'
+    to_train: 'К поезду'
+    assign_route: 'Назначенный маршрут'
+    attached_cars: 'Присоединеные вагоны'
+    add_car: 'Добавить вагон'
+    tail: 'С хвоста'
+    head: 'С головы'
+  messages:
+    title: 'Название будет сформировано автоматически'
+    absent: 'отсутствуют'
+    route_absent: 'Маршрут не назначен'
+    train_absent: 'Поезд не назначен'
+  buttons:
+    update_position: 'Обновить позицию'
+    update_time: 'Обновить время'
+  user:
+    tickets: 'Мои билеты'
+  admin:
+    title: 'УЖД - Админка'
+    railway_stations:
+      new:
+        title: 'Новая станция'
+      edit:
+        title: 'Редактировать станцию'
+      form:
+        submit: '%{action} станцию'
+      create:
+        success: 'Станция успешно создана'
+      update:
+        success: 'Станция успешно обновлена'
+      destroy:
+        success: 'Станция успешно удалена'
+    routes:
+      new:
+        title: 'Новый маршрут'
+      edit:
+        title: 'Редактировать маршрут'
+      form:
+        submit: '%{action} маршрут'
+      create:
+        success: 'Маршрут успешно создан'
+      update:
+        success: 'Маршрут успешно обновлен'
+      destroy:
+        success: 'Маршрут успешно удален'
+    tickets:
+      edit:
+        title: 'Редактировать билет'
+        submit: 'Обновить билет'
+      update:
+        success: 'Билет успешно обновлен'
+      destroy:
+        success: 'Билет успешно удален'
+    trains:
+      new:
+        title: 'Новый поезд'
+      edit:
+        title: 'Редактировать поезд'
+      form:
+        submit: '%{action} поезд'
+      create:
+        success: 'Поезд успешно создан'
+      update:
+        success: 'Поезд успешно обновлен'
+      destroy:
+        success: 'Поезд успешно удален'
+    cars:
+      new:
+        title: 'Новый вагон'
+      edit:
+        title: 'Редактировать вагон'
+      form:
+        submit: '%{action} вагон'
+      create:
+        success: 'Вагон успешно создан'
+      update:
+        success: 'Вагон успешно обновлен'
+      destroy:
+        success: 'Вагон успешно удален'
+  tickets:
+    new:
+      title: 'Новый билет'
+      submit: 'Создать билет'
+    create:
+      success: 'Билет успешно создан'
+    destroy:
+      success: 'Билет успешно удален'

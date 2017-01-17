@@ -1,0 +1,44 @@
+ru:
+  activerecord:
+    models:
+      railway_station: 'Станция'
+      train: 'Поезд'
+      route: 'Маршрут'
+      ticket: 'Билет'
+      car: 'Вагон'
+    attributes:
+      railway_station:
+        title: 'Название'
+      train:
+        number: 'Номер'
+        route_id: 'Назначенный маршрут'
+        cars_order: 'Порядок вагонов'
+      ticket:
+        number: 'Номер'
+        fullname: 'ФИО'
+        passport: 'Номер паспорта'
+      route:
+        train_ids: 'Номер поезда'
+        railway_station_ids: 'Список станций'
+        title: 'Название'
+      car:
+        type: 'Тип'
+        upper_places: 'Верхних мест'
+        lower_places: 'Нижних мест'
+        side_upper_places: 'Боковых верхних мест'
+        side_lower_places: 'Боковых нижних мест'
+        seat_places: 'Сидячих мест'
+    errors:
+      messages:
+        blank: 'не может быть пустым'
+      models:
+        railway_station:
+          attributes:
+            title:
+              blank: 'должно быть указано'
+        route:
+          attributes:
+            base:
+              invalid: 'Маршрут должен содержать по крайней мере 2 станции'
+
+

@@ -1,11 +1,11 @@
-<h1>Cars list</h1>
+<h1><%= t('menu.cars') %></h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
-      <th>Number</th>
-      <th>Type</th>
-      <th>Train</th>
+      <th><%= t('common.number') %></th>
+      <th><%= t('menu.type') %></th>
+      <th><%= t('menu.train_number') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +16,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-<%= link_to 'Home', welcome_index_path %>

@@ -1,23 +1,24 @@
-<h1>Train search</h1>
+<h1 class="text-uppercase"><%= t('menu.search') %></h1>
 <p>
-  <table>
-    <thead>
-    <tr>
-      <td>Departure station</td>
-      <td>Arrival station</td>
-      <td></td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
+    <div class="row">
+      <div class="col-md-4">
+        <%= t('common.departure_station') %>
+      </div>
+      <div class="col-md-4">
+        <%= t('common.arrival_station') %>
+      </div>
+    </div>
+    <div class="row">
       <%= form_tag search_path, method: :post do %>
-          <td><%= select_tag :departure_station_id, options_from_collection_for_select(@railway_stations, :id, :title) %></td>
-          <td><%= select_tag :arrival_station_id, options_from_collection_for_select(@railway_stations, :id, :title) %></td>
-          <td><%= submit_tag "Search" %></td>
+          <div class="col-md-4">
+            <%= select_tag :departure_station_id, options_from_collection_for_select(@railway_stations, :id, :title), class: 'form-control' %>
+          </div>
+          <div class="col-md-4" >
+            <%= select_tag :arrival_station_id, options_from_collection_for_select(@railway_stations, :id, :title), class: 'form-control' %>
+          </div>
+          <div class="col-md-4">
+            <%= submit_tag t('menu.search'), class: 'btn btn-primary' %>
+          </div>
       <% end %>
-    </tr>
-    </tbody>
-  </table>
+    </div>
 </p>
-
-<%= link_to 'Home', welcome_index_path %>

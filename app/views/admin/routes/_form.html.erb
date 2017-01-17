@@ -1,19 +1,19 @@
 <%= form_for([:admin, @route]) do |f| %>
   <%= render 'common/errors', resource: @route %>
 
-  Route title will be create automatically
+  <%= t('messages.title') %>
 
   <div class="field">
-    <%= f.label :train_ids, "Assign trains" %>
+    <%= f.label :train_ids  %>
     <%= f.collection_select :train_ids, Train.all, :id, :number, {}, { multiple: true } %>
   </div>
 
   <div class="field">
-    <%= f.label :railway_station_ids, "Stations list:" %>
+    <%= f.label :railway_station_ids %>
     <%= f.collection_select :railway_station_ids, RailwayStation.all, :id, :title, {}, { multiple: true } %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('.submit', action: @route.new_record? ? 'Создать' : 'Изменить' ), class: "btn btn-default"%>
   </div>
 <% end %>

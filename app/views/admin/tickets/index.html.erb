@@ -1,9 +1,9 @@
-<h1>Tickets list</h1>
+<h1><%= t('menu.tickets') %></h1>
 
-<table>
+<table class="table table-hover">
   <thead>
   <tr>
-    <th>Number</th>
+    <th><%= t('common.number') %></th>
     <th colspan="3"></th>
   </tr>
   </thead>
@@ -12,7 +12,3 @@
   <%= render @tickets %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Home', welcome_index_path %>
