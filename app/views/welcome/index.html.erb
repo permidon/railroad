@@ -1,14 +1,18 @@
-<h1>Railroad Operations Manager</h1>
+<h1 class="text-capitalize"><%= t('common.title')%></h1>
 
 <% if !user_signed_in? %>
-    Enter to the system for begining
+    <p class="lead"><%= t('common.invitation')%></p>
 <% elsif current_user.admin? %>
-    <%= link_to 'Stations List', admin_railway_stations_path %> |
-    <%= link_to 'Trains List', admin_trains_path %> |
-    <%= link_to 'Routes List', admin_routes_path %> |
-    <%= link_to 'Cars List', admin_cars_path %> |
-    <%= link_to 'Tickets List', admin_tickets_path %> |
+    <div>
+      <%= link_to t('menu.stations'), admin_railway_stations_path %> |
+      <%= link_to t('menu.trains'), admin_trains_path %> |
+      <%= link_to t('menu.routes'), admin_routes_path %> |
+      <%= link_to t('menu.cars'), admin_cars_path %> |
+      <%= link_to t('menu.tickets'), admin_tickets_path %>
+    </div>
 <% else %>
-    <%= link_to 'Search', search_path %> |
-    <%= link_to 'Tickets List', tickets_path %>
+    <div>
+      <%= link_to t('menu.search'), search_path %> |
+      <%= link_to t('user.tickets'), tickets_path %>
+    </div>
 <% end %>

@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
-    Hi, <%= current_user.first_name %> <%= current_user.last_name %>!
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    <%= t('common.greeting') %>, <%= current_user.first_name %> <%= current_user.last_name %>!
+    <%= link_to t('common.sign_out'), destroy_user_session_path, method: :delete %>
 <% else %>
-    <%= link_to "Sign in", new_user_session_path %>
+    <%= link_to t('common.sign_in'), new_user_session_path %>
 <% end %>

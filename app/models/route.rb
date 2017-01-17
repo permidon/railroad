@@ -11,12 +11,12 @@ class Route < ApplicationRecord
   private
 
   def set_name
-    self.title = "#{railway_stations.first.title} - #{railway_stations.last.title}"
+    self.title = "#{railway_stations.first.title} - #{railway_stations.last.title}" unless railway_stations.empty?
   end
 
   def stations_count
     if railway_stations.size < 2
-      errors.add(:base, "Route should contain at least 2 stations")
+      errors.add(:base)
     end
   end
 end

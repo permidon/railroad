@@ -1,38 +1,38 @@
 <p>
-  <strong>Number:</strong>
+  <strong><%= t('common.number') %>:</strong>
   <%= @car.number %>
 </p>
 <p>
-  <strong>Type:</strong>
+  <strong><%= t('menu.type') %>:</strong>
   <%= @car.type %>
 </p>
 <p>
-  <strong>Seats quantity:</strong>
+  <strong><%= t('menu.seats_quantity') %>:</strong>
   <% if @car.upper_places.present? %>
-    Upper places: <%= @car.upper_places %>.
+      <%= t('menu.upper') %> <%= t('menu.places') %>: <%= @car.upper_places %>.
   <% end %>
   <% if @car.lower_places.present? %>
-    Lower places: <%= @car.lower_places %>.
+      <%= t('menu.lower') %> <%= t('menu.places') %>: <%= @car.lower_places %>.
   <% end %>
   <% if @car.side_upper_places.present? %>
-      Side upper places: <%= @car.side_upper_places %>.
+      <%= t('menu.side_upper') %> <%= t('menu.places') %>: <%= @car.side_upper_places %>.
   <% end %>
   <% if @car.side_lower_places.present? %>
-      Side lower places: <%= @car.side_lower_places %>.
+      <%= t('menu.side_lower') %> <%= t('menu.places') %>: <%= @car.side_lower_places %>.
   <% end %>
   <% if @car.seat_places.present? %>
-      Seat places: <%= @car.seat_places %>.
+      <%= t('menu.seats') %> <%= t('menu.places') %>: <%= @car.seat_places %>.
   <% end %>
 </p>
 <p>
-  <strong>Connected to train:</strong>
+  <strong><%= t('menu.connected_train') %>:</strong>
   <% if @car.train_id.nil? %>
-    There is no train
+      <%= t('messages.train_absent')%>
   <% else %>
     <%= @car.train.number %>
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_admin_car_path(@car) %> |
-<%= link_to 'To Train', [:admin, @car.train] %> |
-<%= link_to 'Cars list', admin_cars_path %>
+<%= link_to t('common.edit'), edit_admin_car_path(@car) %> |
+<%= link_to t('menu.to_train'), [:admin, @car.train] %> |
+<%= link_to t('menu.cars'), admin_cars_path %>
