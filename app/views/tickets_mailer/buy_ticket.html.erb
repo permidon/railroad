@@ -1,0 +1,5 @@
+<p> <%= t('common.greeting') %>, <%= @user.first_name %> <%= @user.last_name %></p>
+
+<p> <%= t('messages.byu_ticket') %>: "<%= @ticket.route_name %>"</p>
+<p> <%= t('messages.see_ticket') %> <%= link_to t('common.here'), @ticket %></p>
+<p> <%= t('messages.see_all_ticket') %> <%= link_to t('common.here'), tickets_url %></p>

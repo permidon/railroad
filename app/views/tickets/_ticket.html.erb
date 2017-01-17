@@ -1,5 +1,5 @@
 <tr>
   <td><%= ticket.number %></td>
   <td><%= link_to t('common.show'), ticket %></td>
-  <td><%= link_to t('common.destroy'), ticket, method: :delete, data: { confirm: t('common.confirmation')} %></td>
+  <td><%= link_to t('common.cancel'), ticket, method: :delete, data: { confirm: t('common.confirmation')} %></td>
 </tr>

@@ -8,9 +8,24 @@ class Ticket < ApplicationRecord
 
   before_validation :set_number
 
+  after_create :send_notification
+  after_destroy :send_cancellation
+
+  def route_name
+    "#{first_station.title} - #{last_station.title}"
+  end
+
   private
 
   def set_number
     self.number = "#{rand(99999)}"
+  end
+
+  def send_notification
+    TicketsMailer.buy_ticket(self.user, self).deliver_now
+  end
+
+  def send_cancellation
+    TicketsMailer.cancel_ticket(self.user, self).deliver_now
   end
 end
