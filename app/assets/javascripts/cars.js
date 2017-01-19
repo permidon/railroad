@@ -8,20 +8,20 @@ $(document).ready(function () {
             type += $( this ).text();
         });
         if (type === "SleepingCar") {
-            $('.to_hide').addClass("hidden");
-            $('.sleeping_car').removeClass("hidden");
+            $('.economy, .sedentary, .coupe').addClass("hidden");
+            $('.sleeping').removeClass("hidden");
         };
         if (type === "EconomyCar") {
-            $('.to_hide').addClass("hidden");
-            $('.economy_car').removeClass("hidden");
+            $('.sleeping, .sedentary, .coupe').addClass("hidden");
+            $('.economy').removeClass("hidden");
         };
         if (type === "CoupeCar") {
-            $('.to_hide').addClass("hidden");
-            $('.coupe_car').removeClass("hidden");
+            $('.economy, .sedentary, .sleeping').addClass("hidden");
+            $('.coupe').removeClass("hidden");
         };
         if (type === "SedentaryCar") {
-            $('.to_hide').addClass("hidden");
-            $('.sedentary_car').removeClass("hidden");
+            $('.economy, .sleeping, .coupe').addClass("hidden");
+            $('.sedentary').removeClass("hidden");
         };
     });
 });
