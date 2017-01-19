@@ -1,7 +1,7 @@
 <h1 class="text-capitalize"><%= t('common.title')%></h1>
 
 <% if !user_signed_in? %>
-    <p class="lead"><%= t('common.invitation')%></p>
+    <%= link_to t('menu.search'), search_path %>
 <% elsif current_user.admin? %>
     <div>
       <%= link_to t('menu.stations'), admin_railway_stations_path %> |

@@ -6,29 +6,31 @@
       <%= f.select :type, ["SedentaryCar", "EconomyCar", "CoupeCar", "SleepingCar"] %>
     </div>
 
-    <div class="field">
-      <%= f.label :upper_places %>
-      <%= f.text_field :upper_places %>
-    </div>
+    <div>
+      <div class="field economy coupe hidden">
+        <%= f.label :upper_places %>
+        <%= f.text_field :upper_places %>
+      </div>
 
-    <div class="field">
-      <%= f.label :lower_places %>
-      <%= f.text_field :lower_places %>
-    </div>
+      <div class="field sleeping economy coupe hidden">
+        <%= f.label :lower_places %>
+        <%= f.text_field :lower_places %>
+      </div>
 
-    <div class="field">
-      <%= f.label :side_upper_places %>
-      <%= f.text_field :side_upper_places %>
-    </div>
+      <div class="field economy hidden">
+        <%= f.label :side_upper_places %>
+        <%= f.text_field :side_upper_places %>
+      </div>
 
-    <div class="field">
-      <%= f.label :side_lower_places %>
-      <%= f.text_field :side_lower_places %>
-    </div>
+      <div class="field economy hidden">
+        <%= f.label :side_lower_places %>
+        <%= f.text_field :side_lower_places %>
+      </div>
 
-    <div class="field">
-      <%= f.label :seat_places %>
-      <%= f.text_field :seat_places %>
+      <div class="field sedentary">
+        <%= f.label :seat_places %>
+        <%= f.text_field :seat_places %>
+      </div>
     </div>
 
     <div class="actions">

@@ -27,7 +27,7 @@ class Admin::RoutesController < Admin::BaseController
 
   def update
     if @route.update(route_params)
-      redirect_to [:admin, @route], notice: t('.success')
+      redirect_to admin_routes_path, notice: t('.success')
     else
       render :edit
     end
