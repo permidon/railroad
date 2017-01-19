@@ -28,7 +28,7 @@ class Admin::RailwayStationsController < Admin::BaseController
 
   def update
     if @railway_station.update(railway_station_params)
-      redirect_to [:admin, @railway_station], notice: t('.success')
+      redirect_to admin_railway_stations_path, notice: t('.success')
     else
       render :edit
     end
