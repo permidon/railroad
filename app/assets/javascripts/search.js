@@ -9,7 +9,7 @@ $(document).ready(function() {
             console.log(last_station);
 
         if (first_station.val() == last_station.val()) {
-            alert('Названия станций не могут совпадать');
+            alert('Stations should have different names');
             return false;
         }
     });

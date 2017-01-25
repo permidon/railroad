@@ -11,10 +11,10 @@ $(document).ready(function () {
         title = $('#route_title_' + route_id);
 
         if (!$(this).hasClass('cancel')) {
-            $(this).html('Отменить');
+            $(this).html('Cancel');
             $(this).addClass('cancel');
         } else {
-            $(this).html('Редактировать');
+            $(this).html('Edit');
             $(this).removeClass('cancel');
         }
 

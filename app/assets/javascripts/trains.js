@@ -11,10 +11,10 @@ $(document).ready(function () {
         number = $('#train_number_' + train_id);
 
         if (!$(this).hasClass('cancel')) {
-            $(this).html('Отменить');
+            $(this).html('Cancel');
             $(this).addClass('cancel');
         } else {
-            $(this).html('Редактировать');
+            $(this).html('Edit');
             $(this).removeClass('cancel');
         }
 

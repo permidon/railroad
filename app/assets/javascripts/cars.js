@@ -1,7 +1,4 @@
 $(document).ready(function () {
-
-    var form_class;
-
     $('#car_type').change(function (){
         var type = "";
         $("select option:selected").each(function() {

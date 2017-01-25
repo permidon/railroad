@@ -1,0 +1,23 @@
+ru:
+  activerecord:
+    models:
+      railway_station: 'Station'
+    attributes:
+      railway_station:
+      train:
+        route_id: 'Assigned route'
+      ticket:
+        fullname: 'Full name'
+        passport: 'ID Number'
+      route:
+        train_ids: 'Train number'
+        railway_station_ids: 'Stations list'
+    errors:
+      models:
+        route:
+          attributes:
+            base:
+              invalid: 'The route should contain at least 2 stations'
+
+
+

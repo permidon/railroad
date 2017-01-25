@@ -20,4 +20,120 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  common:
+    greeting: 'Hi'
+    title: 'Railroad operations manager'
+    invitation: 'Enter to begin'
+    footer: '© 2016-2017 Roman Perminov. Training project at '
+    school: 'online-school Thinknetica'
+    home: 'Home'
+    back: 'Back'
+    show: 'Show'
+    edit: 'Edit'
+    destroy: 'Delete'
+    cancel: 'Cancel purchase'
+    confirmation: 'Are you sure?'
+    number: 'number'
+    arrival_time: 'Arriving at the station:'
+    departure_time: 'Departure from the station:'
+    buy: 'Buy a ticket'
+    no_access: 'You do not have access to this page'
+    here: 'here'
+  menu:
+    admin_part: 'Administration'
+    route_station_time: 'Arrival time / Departure time'
+    route_trains: 'Trains on the route'
+    search: 'Search'
+    number_of_car: 'Car № %{action}'
+    buy_ticket_mail: 'You have bought the ticket № %{action}'
+    cancel_ticket_mail: 'You have canceled buying the ticket № %{action}'
+    new: 'New'
+    edit: 'Edit'
+    edit_station: 'Edit station'
+    passenger: 'Passenger Data'
+    fullname: 'Full name'
+    passport: 'ID'
+  messages:
+    title: 'The name of the route will be create automaticaly'
+    absent: 'are absent'
+    route_absent: 'There is no route'
+    train_absent: 'There is no train'
+    byu_ticket: 'You have bought the ticket by the route'
+    del_ticket: 'You have canceled buying the ticket by the route'
+    see_ticket: 'You can see the ticket details'
+    see_all_ticket: 'You can see all of your tickets'
+  buttons:
+    update_position: 'Update position'
+    update_time: 'Update time'
+  user:
+    tickets: 'My tickets'
+  admin:
+    title: 'Administration'
+    railway_stations:
+      new:
+        title: 'New station'
+      edit:
+        title: 'Edit station'
+      form:
+        submit: '%{action} station'
+      create:
+        success: 'Station was successfully created.'
+      update:
+        success: 'Station was successfully updated.'
+      destroy:
+        success: 'Station was successfully destroyed.'
+    routes:
+      new:
+        title: 'New route'
+      edit:
+        title: 'Edit route'
+      form:
+        submit: '%{action} route'
+      create:
+        success: 'Route was successfully created.'
+      update:
+        success: 'Route was successfully updated.'
+      destroy:
+        success: 'Route was successfully destroyed.'
+    tickets:
+      edit:
+        title: 'Edit ticket'
+        submit: 'Update ticket'
+      update:
+        success: 'Ticket was successfully updated.'
+      destroy:
+        success: 'Ticket was successfully destroyed.'
+    trains:
+      new:
+        title: 'New train'
+      edit:
+        title: 'Edit train'
+      form:
+        submit: '%{action} train'
+      create:
+        success: 'Train was successfully created.'
+      update:
+        success: 'Train was successfully updated.'
+      destroy:
+        success: 'Train was successfully destroyed.'
+    cars:
+      new:
+        title: 'New car'
+      edit:
+        title: 'Edit car'
+      form:
+        submit: '%{action} car'
+      create:
+        success: 'Car was successfully created.'
+      update:
+        success: 'Car was successfully updated.'
+      destroy:
+        success: 'Car was successfully destroyed.'
+  tickets:
+    new:
+      title: 'New ticket'
+      submit: 'Create a ticket'
+    create:
+      success: 'Ticket was successfully created.'
+    destroy:
+      success: 'Ticket was successfully destroyed.'
